@@ -33,7 +33,7 @@ class _ExposicaoState extends State<Exposicao> {
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: Color(0xFF1C1C1C),
       body: dados.isEmpty
           ? Center(child: CircularProgressIndicator())
           : Stack(
@@ -62,12 +62,8 @@ class _ExposicaoState extends State<Exposicao> {
                                     height: height * .5,
                                     child: ClipRRect(
                                       borderRadius: BorderRadiusGeometry.only(
-                                        topLeft: Radius.circular(
-                                          i == 1 ? 999 : 0,
-                                        ),
-                                        topRight: Radius.circular(
-                                          i == 1 ? 999 : 0,
-                                        ),
+                                        topLeft: Radius.circular(999),
+                                        topRight: Radius.circular(999),
                                       ),
                                       child: Image.asset(
                                         'assets/images/leonardo_da_vinci/$i.jpg',
